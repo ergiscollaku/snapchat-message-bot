@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const body = encodeURIComponent(
         `Emri: ${emri}\nTelefoni: ${telefoni}\nShërbimi: ${sherbimi}\n\nMesazhi:\n${mesazhi}`
       );
-      window.location.href = `mailto:info@alpin-aludur.al?subject=${subject}&body=${body}`;
+      window.location.href = `mailto:info@collaku-duralumin.al?subject=${subject}&body=${body}`;
 
       formNote.textContent = 'Faleminderit! Klienti juaj i email-it duhet të hapet për të dërguar kërkesën.';
       form.reset();
