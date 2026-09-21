@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="g4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f2942"/>
+      <stop offset="100%" stop-color="#1b3a5c"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#g4)"/>
+  <rect x="40" y="40" width="720" height="520" fill="none" stroke="#f5a623" stroke-width="2" stroke-dasharray="10,8" opacity="0.5"/>
+  <g fill="#f5a623" opacity="0.9">
+    <rect x="360" y="230" width="80" height="80" rx="8"/>
+    <path d="M400 230 v80 M360 270 h80" stroke="#0f2942" stroke-width="6"/>
+  </g>
+  <text x="400" y="360" font-family="Arial, sans-serif" font-size="24" fill="#e8edf3" text-anchor="middle">Shto Foto Punimi #4</text>
+  <text x="400" y="392" font-family="Arial, sans-serif" font-size="15" fill="#9fb0c3" text-anchor="middle">images/galeria/punim-4.jpg</text>
+</svg>
