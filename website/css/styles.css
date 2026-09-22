@@ -227,14 +227,20 @@ h1,h2,h3,h4{ font-family: var(--font-head); color: var(--navy); margin:0; }
 .service-card p{ color: var(--gray-500); font-size: 0.95rem; margin:0; }
 
 /* ============ Gallery ============ */
-.gallery-category{ margin-bottom: 44px; }
-.gallery-category:last-child{ margin-bottom: 0; }
-.gallery-category-title{
-  font-size: 1.2rem;
-  margin-bottom: 18px;
-  padding-bottom: 10px;
-  border-bottom: 2px solid var(--gray-200);
+.gallery-filters{ display:flex; gap: 12px; flex-wrap:wrap; margin-bottom: 36px; }
+.filter-btn{
+  padding: 10px 22px;
+  border-radius: 50px;
+  border: 1px solid var(--gray-200);
+  background: var(--white);
+  color: var(--gray-700);
+  font-weight:600;
+  font-size: 0.9rem;
+  cursor:pointer;
+  transition: all 0.2s;
 }
+.filter-btn:hover{ border-color: var(--accent); color: var(--accent-dark); }
+.filter-btn.active{ background: var(--navy); border-color: var(--navy); color: var(--white); }
 
 .gallery-grid{
   display:grid;
@@ -263,6 +269,7 @@ h1,h2,h3,h4{ font-family: var(--font-head); color: var(--navy); margin:0; }
   position:absolute; left:16px; bottom:14px; z-index:2;
   color: var(--white); font-weight:600; font-size: 0.95rem;
 }
+.gallery-item.hidden{ display:none; }
 
 /* Lightbox */
 .lightbox{

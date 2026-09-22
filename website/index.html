@@ -109,48 +109,22 @@
     <h2 class="section-title">Punimet Tona</h2>
     <p class="section-desc">Disa nga projektet e realizuara nga ekipi ynë. Kliko mbi një foto për ta parë më të madhe.</p>
 
-    <div class="gallery-category">
-      <h3 class="gallery-category-title">Dyer Alumini</h3>
-      <div class="gallery-grid">
-        <div class="gallery-item"><img src="images/galeria/punim-1.svg" alt="Derë alumini - projekt 1" loading="lazy"><div class="gallery-caption">Derë Alumini</div></div>
-      </div>
+    <div class="gallery-filters">
+      <button class="filter-btn active" data-filter="all">Të Gjitha</button>
+      <button class="filter-btn" data-filter="alumin">Punime në Alumin</button>
+      <button class="filter-btn" data-filter="pvc">Punime në PVC</button>
+      <button class="filter-btn" data-filter="kangjella">Kangjella</button>
     </div>
 
-    <div class="gallery-category">
-      <h3 class="gallery-category-title">Dyer PVC</h3>
-      <div class="gallery-grid">
-        <div class="gallery-item"><img src="images/galeria/punim-5.svg" alt="Derë PVC - projekt 5" loading="lazy"><div class="gallery-caption">Derë PVC</div></div>
-      </div>
-    </div>
-
-    <div class="gallery-category">
-      <h3 class="gallery-category-title">Dritare Alumini</h3>
-      <div class="gallery-grid">
-        <div class="gallery-item"><img src="images/galeria/punim-6.svg" alt="Dritare alumini - projekt 6" loading="lazy"><div class="gallery-caption">Dritare Alumini</div></div>
-      </div>
-    </div>
-
-    <div class="gallery-category">
-      <h3 class="gallery-category-title">Dritare PVC</h3>
-      <div class="gallery-grid">
-        <div class="gallery-item"><img src="images/galeria/punim-2.svg" alt="Dritare PVC - projekt 2" loading="lazy"><div class="gallery-caption">Dritare PVC</div></div>
-      </div>
-    </div>
-
-    <div class="gallery-category">
-      <h3 class="gallery-category-title">Kangjella</h3>
-      <div class="gallery-grid">
-        <div class="gallery-item"><img src="images/galeria/punim-3.svg" alt="Kangjella ballkoni - projekt 3" loading="lazy"><div class="gallery-caption">Kangjella Ballkoni</div></div>
-        <div class="gallery-item"><img src="images/galeria/punim-7.svg" alt="Kangjella shkallësh - projekt 7" loading="lazy"><div class="gallery-caption">Kangjella Shkallësh</div></div>
-      </div>
-    </div>
-
-    <div class="gallery-category">
-      <h3 class="gallery-category-title">Vetrata</h3>
-      <div class="gallery-grid">
-        <div class="gallery-item"><img src="images/galeria/punim-4.svg" alt="Vetrata dyqani - projekt 4" loading="lazy"><div class="gallery-caption">Vetrata Dyqani</div></div>
-        <div class="gallery-item"><img src="images/galeria/punim-8.svg" alt="Vetrata zyre - projekt 8" loading="lazy"><div class="gallery-caption">Vetrata Zyre</div></div>
-      </div>
+    <div class="gallery-grid" id="galleryGrid">
+      <div class="gallery-item" data-cat="alumin"><img src="images/galeria/punim-1.svg" alt="Derë alumini - projekt 1" loading="lazy"><div class="gallery-caption">Derë Alumini</div></div>
+      <div class="gallery-item" data-cat="alumin"><img src="images/galeria/punim-6.svg" alt="Dritare alumini - projekt 6" loading="lazy"><div class="gallery-caption">Dritare Alumini</div></div>
+      <div class="gallery-item" data-cat="alumin"><img src="images/galeria/punim-4.svg" alt="Vetrata dyqani - projekt 4" loading="lazy"><div class="gallery-caption">Vetrata Dyqani</div></div>
+      <div class="gallery-item" data-cat="alumin"><img src="images/galeria/punim-8.svg" alt="Vetrata zyre - projekt 8" loading="lazy"><div class="gallery-caption">Vetrata Zyre</div></div>
+      <div class="gallery-item" data-cat="pvc"><img src="images/galeria/punim-5.svg" alt="Derë PVC - projekt 5" loading="lazy"><div class="gallery-caption">Derë PVC</div></div>
+      <div class="gallery-item" data-cat="pvc"><img src="images/galeria/punim-2.svg" alt="Dritare PVC - projekt 2" loading="lazy"><div class="gallery-caption">Dritare PVC</div></div>
+      <div class="gallery-item" data-cat="kangjella"><img src="images/galeria/punim-3.svg" alt="Kangjella ballkoni - projekt 3" loading="lazy"><div class="gallery-caption">Kangjella Ballkoni</div></div>
+      <div class="gallery-item" data-cat="kangjella"><img src="images/galeria/punim-7.svg" alt="Kangjella shkallësh - projekt 7" loading="lazy"><div class="gallery-caption">Kangjella Shkallësh</div></div>
     </div>
   </div>
 </section>
