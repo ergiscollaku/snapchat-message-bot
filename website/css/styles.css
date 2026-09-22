@@ -174,9 +174,9 @@ h1,h2,h3,h4{ font-family: var(--font-head); color: var(--navy); margin:0; }
 .trust-strip{ background: var(--gray-50); border-bottom: 1px solid var(--gray-200); }
 .trust-inner{
   display:flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 48px;
   padding: 20px 24px;
 }
 .trust-item{
