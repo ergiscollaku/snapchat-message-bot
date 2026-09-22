@@ -76,26 +76,4 @@ document.addEventListener('DOMContentLoaded', () => {
     if (e.key === 'ArrowLeft') openLightbox(currentIndex - 1);
     if (e.key === 'ArrowRight') openLightbox(currentIndex + 1);
   });
-
-  // Contact form (client-side only — needs a backend/email service to actually send)
-  const form = document.getElementById('contactForm');
-  const formNote = document.getElementById('formNote');
-  if (form) {
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const emri = document.getElementById('emri').value.trim();
-      const telefoni = document.getElementById('telefoni').value.trim();
-      const sherbimi = document.getElementById('sherbimi').value;
-      const mesazhi = document.getElementById('mesazhi').value.trim();
-
-      const subject = encodeURIComponent(`Kërkesë e re nga ${emri} - ${sherbimi}`);
-      const body = encodeURIComponent(
-        `Emri: ${emri}\nTelefoni: ${telefoni}\nShërbimi: ${sherbimi}\n\nMesazhi:\n${mesazhi}`
-      );
-      window.location.href = `mailto:info@collaku-duralumin.al?subject=${subject}&body=${body}`;
-
-      formNote.textContent = 'Faleminderit! Klienti juaj i email-it duhet të hapet për të dërguar kërkesën.';
-      form.reset();
-    });
-  }
 });
