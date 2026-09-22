@@ -20,22 +20,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (header) header.style.boxShadow = window.scrollY > 10 ? '0 6px 20px rgba(0,0,0,0.15)' : 'none';
   });
 
-  // Gallery filtering
-  const filterBtns = document.querySelectorAll('.filter-btn');
-  const galleryItems = document.querySelectorAll('.gallery-item');
-  filterBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      filterBtns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      const filter = btn.dataset.filter;
-      galleryItems.forEach(item => {
-        const match = filter === 'all' || item.dataset.cat === filter;
-        item.classList.toggle('hidden', !match);
-      });
-    });
-  });
-
   // Lightbox
+  const galleryItems = document.querySelectorAll('.gallery-item');
   const lightbox = document.getElementById('lightbox');
   const lightboxImg = document.getElementById('lightboxImg');
   const lightboxClose = document.getElementById('lightboxClose');
@@ -43,26 +29,17 @@ document.addEventListener('DOMContentLoaded', () => {
   const lightboxNext = document.getElementById('lightboxNext');
   let currentIndex = 0;
 
-  function visibleItems() {
-    return Array.from(galleryItems).filter(item => !item.classList.contains('hidden'));
-  }
-
   function openLightbox(index) {
-    const items = visibleItems();
-    if (!items.length) return;
-    currentIndex = (index + items.length) % items.length;
-    const img = items[currentIndex].querySelector('img');
+    if (!galleryItems.length) return;
+    currentIndex = (index + galleryItems.length) % galleryItems.length;
+    const img = galleryItems[currentIndex].querySelector('img');
     lightboxImg.src = img.src;
     lightboxImg.alt = img.alt;
     lightbox.classList.add('open');
   }
 
-  galleryItems.forEach((item) => {
-    item.addEventListener('click', () => {
-      const items = visibleItems();
-      const idx = items.indexOf(item);
-      openLightbox(idx);
-    });
+  galleryItems.forEach((item, idx) => {
+    item.addEventListener('click', () => openLightbox(idx));
   });
 
   if (lightboxClose) lightboxClose.addEventListener('click', () => lightbox.classList.remove('open'));
